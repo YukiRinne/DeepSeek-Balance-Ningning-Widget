@@ -2,7 +2,6 @@
 
 DeepSeek Harness（DSH）Web 界面右下角的常驻余额小挂件：宁宁形象 + DeepSeek API 余额 + 今日已用 + 每轮对话消耗统计，每次打开界面自动启用。
 
-本项目由 [MeteorNOX/DeepSeek-Balance-Whale-Widget](https://github.com/MeteorNOX/DeepSeek-Balance-Whale-Widget) 派生，将鲸鱼形象（`DSniang1.png` / `DSniang02.png`）替换为宁宁形象（`ningning1.png` / `ningning2.png`），并整体更名为 ningning。
 
 ## 特性
 
@@ -74,27 +73,12 @@ curl http://127.0.0.1:3080/   # index.html 含 widget.js 脚本标签
 
 ## 更新记录
 
-### v0.1.2 — 2026-09-04
-
-- `rua.gif` 替换为 `rua ningning.gif`（112×112 五帧动画）
-- 随机台词宁宁化：
-  - `Ciallo～(∠・ω )⌒☆`：独立台词组，改用 `A` 档字号（约原 `B` 档一半），保证完整显示不溢出
-  - `压力一只蓝色大肥鱼？！` → `今天也是元气满满的宁宁~`
-  - `哦宁宁...` → `欧纳尼……`
-
 ### v0.1.1 — 2026-09-03
 
 - 新增**任务完成提示音**：宿主监听会话事件，每轮对话结束（`turn/end`）后页面自动播放 `0721.mp3`（「请看我~」）
   - 新路由 `/dsh-ningning/sound/task.mp3`（实时读盘、no-store）
   - 1.5 秒防连发保护（子代理并行结束不爆音）；音量跟随挂件音量设置
 
-### v0.1.0 — 2026-09-03（初始派生）
-
-- 形象替换：`ningning1.png`（主形象）/ `ningning2.png`（兜底），透明补边为方形画布避免拉伸变形
-- 整体改名：
-  - 包名 `dsh-ningning-widget`，插件 id / 路由前缀 `/dsh-ningning/*`、类前缀 `dshnnv-`
-  - 浏览器守卫 `__dshNingningWidget`、位置存储键 `dshnn-pos`、配置/账本文件 `.dshn-size.json` / `.dshn-usage.json`
-- 清理原作者遗留绝对路径（`D:/TestBox/...` fallback）与鲸鱼品牌残留文案（菜单「小鲸鱼记账」→「余额记账」）
 
 ## 致谢与许可
 
